@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios - Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Productos</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="accesorios.html">Accesorios</a>
+            <a href="ayuda.html">Ayuda</a>
+            <a href="info.html">Información</a>
+        </nav>
+    </header>
+
+    <!-- Lista de Accesorios -->
+    <section id="productos">
+        <h2>Accesorios Disponibles</h2>
+        <div class="producto" data-id="a1" data-nombre="Control PS5" data-precio="60">
+            <h3>Control PS5</h3>
+            <img src="images/Control PS5.jpg" alt="Control PS5">
+            <p>Control inalámbrico DualSense para PS5.</p>
+            <p>Precio: $60</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-id="a2" data-nombre="Joy-Con Switch" data-precio="70">
+            <h3>Joy-Con Switch</h3>
+            <img src="images/Joy-Con Switch.jpg" alt="Joy-Con Switch">
+            <p>Par de controles Joy-Con para Nintendo Switch.</p>
+            <p>Precio: $70</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-id="a3" data-nombre="Auriculares Gaming" data-precio="45">
+            <h3>Auriculares Gaming</h3>
+            <img src="images/Auriculares Gaming.jpeg" alt="Auriculares Gaming">
+            <p>Auriculares gaming con micrófono incorporado.</p>
+            <p>Precio: $45</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-id="a4" data-nombre="Cargador Universal" data-precio="25">
+            <h3>Cargador Universal</h3>
+            <img src="images/CargadorUniversal.jpg" alt="Cargador Universal">
+            <p>Cargador compatible con múltiples consolas.</p>
+            <p>Precio: $25</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="productos-en-carrito">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+        </ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="comprar">Realizar Compra</button>
+    </section>
+
+    <script src="acce.js"></script>
+</body>
+</html>

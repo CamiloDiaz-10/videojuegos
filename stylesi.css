@@ -1,0 +1,237 @@
+:root {
+    --primary: #FF3366;
+    --secondary: #6C63FF;
+    --dark: #111111;
+    --light: #FFFFFF;
+    --gray: #2A2A2A;
+    --accent: #00F5D4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header Moderno */
+header {
+    background: var(--gray);
+    padding: 1.5rem 0;
+    border-bottom: 3px solid var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+header nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Tarjetas */
+.card {
+    background: var(--gray);
+    border: 2px solid var(--primary);
+    border-radius: 0;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+/* Títulos */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h2::before {
+    content: '/>';
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+/* Sección Biografía */
+#biografia {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.foto-biografia {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.foto-biografia:hover {
+    transform: rotate(0deg) scale(1.1);
+}
+
+/* Listas */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-left: 4px solid var(--secondary);
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+    border-left-color: var(--primary);
+}
+
+/* Enlaces */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary);
+    text-decoration: underline wavy var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--gray);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 3px solid var(--secondary);
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--light);
+}
+
+/* Botones */
+.btn {
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Efectos de scroll */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #biografia {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .foto-biografia {
+        margin: 0 auto;
+    }
+    
+    header nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Animaciones */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

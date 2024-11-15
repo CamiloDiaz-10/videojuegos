@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Productos</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="accesorios.html">Accesorios</a>
+            <a href="ayuda.html">Ayuda</a>
+            <a href="info.html">Información</a>
+        </nav>
+    </header>
+
+    <!-- Lista de Productos -->
+    <section id="productos">
+        <h2>Productos Disponibles</h2>
+        <div class="producto" data-id="1" data-nombre="Producto 1" data-precio="50">
+            <h3>retro</h3>
+            <img src="images/retro.jpg" alt="Producto 1">
+            <p>Descripción breve del Producto 1.</p>
+            <p>Precio: $50</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-id="2" data-nombre="Producto 2" data-precio="80">
+            <h3>switch</h3>
+            <img src="images/switch.jpeg" alt="Producto 2">
+            <p>Descripción breve del Producto 2.</p>
+            <p>Precio: $80</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-id="3" data-nombre="PS4" data-precio="100">
+            <h3>PS4</h3>
+            <img src="images/ps4.jpeg" alt="PS4">
+            <p>Descripción breve del Producto 3.</p>
+            <p>Precio: $100</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-id="4" data-nombre="producto 4" data-precio="200">
+            <h3>PS5</h3>
+            <img src="images/ps5.jpg" alt="producto 4">
+            <p>Descripción breve del Producto 4.</p>
+            <p>Precio: $200</p>
+            <button class="add-to-cart">Agregar al Carrito</button>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="productos-en-carrito">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+        </ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="comprar">Realizar Compra</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
